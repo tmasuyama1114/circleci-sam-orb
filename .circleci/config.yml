@@ -13,7 +13,7 @@ workflows:
       - sam/deploy:
           context: aws-credentials-context
           name: deploy-staging
-          # s3-bucket: my-s3-bucket
+          s3-bucket: circleci-sam-orb-test
           stack-name: staging-stack
           template: ./template.yaml
       - test_my_api:
