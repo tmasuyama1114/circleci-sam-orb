@@ -15,7 +15,7 @@ workflows:
           name: deploy-staging
           # s3-bucket: my-s3-bucket
           stack-name: staging-stack
-          template: ./template.yml
+          template: ./template.yaml
       - test_my_api:
           requires:
             - deploy-staging
@@ -25,4 +25,4 @@ workflows:
           requires:
             - test_my_api
           stack-name: production-stack
-          template: ./template.yml
+          template: ./template.yaml
