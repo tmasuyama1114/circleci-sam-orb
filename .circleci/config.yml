@@ -22,6 +22,7 @@ workflows:
       - sam/deploy:
           context: aws-credentials-context
           name: deploy-production
+          s3-bucket: circleci-sam-orb-prod
           requires:
             - test_my_api
           stack-name: production-stack
